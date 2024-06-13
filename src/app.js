@@ -49,6 +49,6 @@ io.on("connection", (socket) => {
         //Acá estoy guardando la información que me envia el cliente (usuario + mensaje) y lo voy a almacenar en un array. 
 
         //Emitimos mensaje al cliente, con todo el array de datos: 
-        socket.emit("mensajesLogs", mensajes);
+        io.emit("mensajesLogs", mensajes);
     })
 })
